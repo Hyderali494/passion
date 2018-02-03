@@ -1,0 +1,4 @@
+Django==1.11.1
+Mysql-Python==1.2.5
+djangorestframework==3.7.7
+django-bulk-admin==0.1.1
