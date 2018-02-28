@@ -11,8 +11,9 @@ def newArrivals(request):
     products = list(Products.objects.filter().values_list('image', flat=True).distinct())
     return render(request, 'newarrivals.html', {'products': products})
 def stockProducts(request):
-    sproducts = list(Stock_Products.objects.filter().values_list('image', flat=True).distinct())
+   # sproducts = list(Stock_Products.objects.filter().values_list('image', flat=True).distinct())
    # sproducts = Stock_Products.objects.all()
+    sproducts = Stock_Products.objects.filter()
     return render(request, 'stockproducts.html', {'sproducts': sproducts})
 
 
