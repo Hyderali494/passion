@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^landingpage',digging_views.landingpage),
     url(r'^newArrivals',digging_views.newArrivals),
     url(r'^stockProducts',digging_views.stockProducts),
+    url(r'^Products',digging_views.Products),
 ]
