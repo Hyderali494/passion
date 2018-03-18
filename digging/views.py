@@ -12,15 +12,16 @@ def newArrivals(request):
     return render(request, 'newarrivals.html', {'products': products})
 def stockProducts(request):
     page_no = request.GET.get('page', 1)
-    sproducts = Stock_Products.objects.filter().values_list('image', flat=True).distinct()
+    sproducts = Stock_Products.objects.filter()
     paginator = Paginator(sproducts, 5)
     return render(request, 'stockproducts.html', {'sproducts': list(paginator.page(page_no))})
 def Products(request):
     page_no = request.GET.get('page', 1)
-    sproducts = Stock_Products.objects.filter().values_list('image', flat=True).distinct()
+    sproducts = Stock_Products.objects.filter()
     paginator = Paginator(sproducts, 5)
     try:
         data = list(paginator.page(page_no))
     except:
         data = []
     return render(request, 'products.html', {'sproducts': data})
+
